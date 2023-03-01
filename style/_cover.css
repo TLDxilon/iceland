@@ -1,0 +1,55 @@
+.hero {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-title {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+}
+
+.menu-is-open .hero-title {
+  opacity: 0;
+}
+
+.hero-title h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15vw;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.video-container {
+  display: none;
+}
+
+.mobile-cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.white-container {
+  display: none;
+}
+
+@media (min-width:600px) { 
+  .white-container {
+     width: 60%;
+  }
+}
+
+@media (min-width:1200px) { 
+  .hero-title h1 {
+    font-size: 160px;
+  }    
+}
